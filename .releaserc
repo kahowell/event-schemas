@@ -1,16 +1,14 @@
 {
-  # NOTE: "placeholder" can be replaced with "main" once we're ready to declare "1.0", i.e.
-  # "branches": ["main"],
-  "branches": [{"name": "placeholder"}, {"name": "main", "channel": "prerelease", "prerelease": true}],
+  "branches": ["main"],
   "plugins": [
     # NOTE: the following lines should be removed and replaced with the
     # commented out one once we're ready to declare "1.0"
+    # "@semantic-release/commit-analyzer",
     ["@semantic-release/commit-analyzer", {
       "releaseRules": [
         {"release": "minor"},
       ],
     }],
-    # "@semantic-release/commit-analyzer",
     "@semantic-release/release-notes-generator",
     ["@semantic-release/github", {
       "assets": [
