@@ -17,3 +17,14 @@ jobs:
       - run: npx semantic-release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      # NOTE: the below step can be removed once we declare 1.0
+      - name: Mark just added release as prerelease
+        uses: actions/github-script@v6
+        with:
+          script: |
+            github.rest.repos.updateRelease({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              release_id: 'latest',
+              prerelease: true,
+            })
