@@ -1,6 +1,7 @@
 {
-  # NOTE: channel should be removed once we're ready to declare "1.0"
-  "branches": [{"name": "main", "channel": "prerelease", "prerelease": true}],
+  # NOTE: "placeholder" can be replaced with "main" once we're ready to declare "1.0", i.e.
+  # "branches": ["main"],
+  "branches": [{"name": "placeholder"}, {"name": "main", "channel": "prerelease", "prerelease": true}],
   "plugins": [
     # NOTE: the following lines should be removed and replaced with the
     # commented out one once we're ready to declare "1.0"
